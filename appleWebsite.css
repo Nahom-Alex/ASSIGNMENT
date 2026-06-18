@@ -1,0 +1,664 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+body {
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+img {
+  max-height: 100%;
+  padding: 1% 0 1% 0;
+  width: auto;
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+header {
+  position: fixed;
+}
+.header-wrapper {
+  background: white;
+  width: 100%;
+  height: 40px;
+}
+.inner-wrapper {
+  padding: 0 5% 0 5%;
+  height: 100%;
+}
+.inner-wrapper ul {
+  height: 100%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: space-between;
+}
+.inner-wrapper ul li {
+  height: 100%;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+/*fix the color and type of the options*/
+.inner-wrapper ul li a {
+  height: 100%;
+  text-decoration: none;
+  color: rgb(40, 38, 38);
+}
+
+/* put the options side by side*/
+.inner-wrapper ul div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-spacer {
+  height: 40px;
+  width: 100%;
+}
+
+.menu-checkbox,/*keeps them in line*/
+.hamburger-icon {
+  display: none;
+}
+
+/* the reactive starting */
+@media (max-width: 1000px) {
+  .hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: absolute; /* Removes it from crowding the ul row elements */
+    top: 14px; /* Centers it vertically inside the 40px top bar */
+    right: 5%;
+    width: 18px; /* How wide the lines are */
+    height: 11px; /* creates the empty space BETWEEN the two lines */
+    cursor: pointer;
+    z-index: 10001; /* Keeps it floating cleanly */
+  }
+  .hamburger-icon span {
+    display: block;
+    width: 100%;
+    height: 1.5px; /* thickness of the lines*/
+    background-color: rgb(40, 38, 38); /* Matches navbar text color */
+    transition: transform 0.2s ease; /* Makes the transition smooth */
+  }
+
+  .inner-wrapper ul div.text-links {
+    display: none;
+    position: fixed;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 40px);
+    background: #ffffff;
+
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    z-index: 10000;
+    box-sizing: border-box;
+  }
+}
+
+/* the main class images starting */
+
+.main-image {
+  background: url("images/mainImages/hero_iphone_family.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  margin: 2px 0;
+}
+.textWrapper {
+  padding: 10px 0 0;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial,
+    sans-serif;
+  text-align: center;
+  padding: 40px;
+  background-color: transparent;
+}
+.textWrapper div {
+  padding: 7px;
+}
+
+.titleWrapper h1 {
+  font-weight: 600px;
+  font-size: 34px;
+  color: #1d1d1f;
+  margin-bottom: -15px; /*fix for the merge problem with the main image and the button*/
+}
+.descriptionWrapper h2 {
+  font-weight: 300;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+}
+.btn {
+  display: inline-block;
+  font-size: 17px;
+  line-height: 1.17649;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+  padding: 12px 22px;
+  border-radius: 98px;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+.btn-filled {
+  background-color: transparent;
+  color: #0071e3;
+  border: 1px solid #0071e3;
+}
+.btn-filled:hover {
+  background-color: #0077ed;
+  color: #ffffff;
+}
+.btn-outlined {
+  background-color: transparent;
+  color: #0071e3;
+  border: 1px solid #0071e3;
+}
+.btn-outlined:hover {
+  background-color: #0077ed;
+  color: #ffffff;
+}
+/*Father's day part*/
+.fathers-day-image {
+  background: url("images/mainImages/The_flowery_thing.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  margin: 2px 0;
+}
+/*Apple for college*/
+.apple-for-college-image {
+  background: url("images/mainImages/hero_college_students_2026.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+
+  text-align: center;
+  width: 100%;
+  height: 450px;
+  margin: 2px 0;
+}
+/*grid*/
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+  max-width: auto;
+  margin: 0;
+  max-height: auto;
+}
+/*Responsiveness*/
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+}
+/*macbook-grid*/
+
+.card1 {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url(images/mainImages/promo_macbook_air_m5.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 350px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.card1 h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 4px;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+.card1 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.card1 img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*ipad-grid*/
+
+.card2 {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url(images/mainImages/promo_ipad_air_m4.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 350px;
+  margin-bottom: 15px;
+}
+
+.card2 h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 4px;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+.card2 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.card2 img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+/*macbookpro-grid*/
+
+.card3 {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url(images/mainImages/promo_macbook_pro.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 350px;
+}
+
+.card3 h2 {
+  font-size: 2rem;
+  color: rgb(223, 211, 211);
+  margin-bottom: 4px;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+.card3 p {
+  font-size: 1.2rem;
+  color: rgb(223, 211, 211);
+  margin-bottom: 4px;
+}
+
+.card3 img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*watch series-grid*/
+
+.card4 {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url(images/mainImages/promo_apple_watch_series_11.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 350px;
+}
+
+.card4 h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+.card4 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.card4 img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  padding: 20px;
+  max-width: auto;
+  margin: 0;
+  max-height: auto;
+}
+
+/*apple card*/
+
+.card5 {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url(images/mainImages/promo_apple_card_airpods.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 350px;
+}
+
+.card5 h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+.card5 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.card5 img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*trade-in*/
+.card6 {
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background: url(images/mainImages/promo_iphone_tradein.jpg);
+  background-size: cover;
+  max-width: 100%;
+  height: 350px;
+}
+
+.card6 h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 5px;
+  margin-top: -10px;
+  padding-top: 15px;
+}
+
+.card6 p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 4px;
+}
+
+.card6 img {
+  max-width: 100%;
+  max-height: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/*entertainment section*/
+
+.entertainment-section {
+  width: 100%;
+  overflow: hidden;
+  background-color: #f5f5f7;
+  padding: 60px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 700;
+  color: #1d1d1f;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
+}
+
+.btn-entertainment {
+  background-color: #dad3d3;
+  color: #313133;
+}
+
+/* --- The Slider System --- */
+
+/* 1. The window viewport wrapper */
+.slider-window {
+  width: 100%;
+  overflow-x: auto; /* Enables horizontal scrolling */
+  scroll-snap-type: x mandatory; /* Snaps cards firmly into place */
+  scroll-behavior: smooth; /* Smooth transitions */
+
+  /* Hides scrollbars across different web browsers */
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.slider-window::-webkit-scrollbar {
+  display: none; /* Hide scrollbars for Chrome, Safari, and Opera */
+}
+
+/* 2. The actual wide row tracking container */
+.slider-track {
+  display: flex;
+  gap: 20px;
+  padding: 0 calc(15vw); /* Creates padding so adjacent cards peek onto screen edges */
+}
+
+.slide-item {
+  flex: 0 0 70vw; /* Card fills exactly 70% of viewport width */
+  max-width: 980px;
+  height: 480px;
+  border-radius: 18px;
+  padding: 40px;
+  scroll-snap-align: center; /* Snaps active card directly to center view */
+  color: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Layout engine to keep text contents pinned to the bottom */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+/* --- Background Image Dynamic Bindings --- */
+.main-feature-card {
+  background-image: url("images/Entertainment/Watch_every_club.jpg");
+  background-color: #000; /* Fallback color */
+}
+
+.arcade-card {
+  background-image: url("images/smallVideoLink/arcade.jpg");
+  background-color: #000; /* Fallback color */
+}
+
+.drama-card {
+  background-image: url(images/Entertainment/your_friends_neighbours.jpg);
+  background-color: #000; /* Fallback color */
+}
+.drama-card h3 {
+  color: #313133;
+}
+.drama-card p {
+  color: #818186;
+}
+
+.thriller-card {
+  background-image: url(images/Entertainment/cape_fear.jpg);
+}
+
+.f1-card {
+  background-image: url(images/Entertainment/F1.jpg);
+  background-color: #000; /* Fallback color */
+}
+
+.animate-loop {
+  animation: scrollInfinite 20s linear infinite;
+}
+
+.animate-loop:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scrollInfinite {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1560px);
+  }
+}
+.card-footer {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.card-caption {
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0.95;
+  line-height: 1.4;
+}
+
+/*Slider Dots*/
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 24px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: #666;
+  border-radius: 50%;
+  display: inline-block;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.dot.active {
+  background-color: #86868b;
+}
+
+.dot:hover {
+  background-color: #86868b;
+}
+
+/* responsiveness */
+@media (max-width: 768px) {
+  .slide-item {
+    flex: 0 0 85vw;
+    height: 380px;
+    padding: 24px;
+  }
+
+  .slider-track {
+    padding: 0 calc(7.5vw);
+  }
+
+  .card-footer {
+    flex-direction: column; /* Stack if phone narrow*/
+    align-items: flex-start;
+    gap: 8px;
+  }
+}
+
+/* footer part */
+
+.footerWrapper {
+  margin: 1px 0 0 0;
+  display: flex;
+  width: 100%;
+  background: rgb(255, 255, 255);
+  justify-content: center;
+  align-items: center;
+}
+.innerFooter {
+  padding: 0 0 0 20px;
+  margin: 0 0% 0 20;
+  width: 70%;
+}
+.entire-Paragraph {
+  color: rgb(94, 91, 91);
+  opacity: 0.85;
+  font-weight: 300;
+}
+.entire-Paragraph li a {
+  text-decoration: underline;
+  font-weight: 400;
+  color: rgb(94, 91, 91);
+}
+
+.entire-paragraph ol {
+  list-style-position: inside;
+  text-align: center;
+}
+/* the footer buttom links */
+
+.bottomLinks {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 0 10px;
+}
+.footer-column ul {
+  margin: 0 0 10px;
+}
+.bottomLinks div ul li a {
+  text-decoration: none;
+  color: rgb(70, 68, 68);
+}
+.bottomLinks div ul li a:hover {
+  text-decoration: underline;
+  color: rgb(70, 68, 68);
+}
+.bottomLinks div ul li {
+  list-style: none;
+  font-weight: 300;
+  font-size: 0.9em;
+  margin: 0 0 1.5px;
+}
+.bottomLinks div ul h3 {
+  color: rgb(70, 68, 68);
+  font-weight: 600;
+  margin: 0 0 5px;
+  font-size: 0.95em;
+}
+.lastone {
+  color: rgb(94, 91, 91);
+  opacity: 0.85;
+  font-weight: 300;
+  margin: 5px 0 15px 0;
+}
+.lastone ul li {
+  list-style: none;
+  margin: 1.5px;
+  color: rgb(94, 91, 91);
+  padding: 2px 0 2px 0;
+}
+.lastone ul li a {
+  text-decoration: none;
+  margin: 1.5px;
+  color: rgb(94, 91, 91);
+}
