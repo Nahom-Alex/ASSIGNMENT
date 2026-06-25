@@ -25,6 +25,7 @@ header {
   background: white;
   width: 100%;
   height: 40px;
+  z-index: 500;
 }
 .inner-wrapper {
   padding: 0 5% 0 5%;
@@ -66,9 +67,15 @@ header {
 .hamburger-icon {
   display: none;
 }
+.footer-checkbox {
+  display: none;
+}
 
 /* the reactive starting */
 @media (max-width: 1000px) {
+  .menu-checkbox {
+    display: none;
+  }
   .hamburger-icon {
     display: flex;
     flex-direction: column;
@@ -104,6 +111,45 @@ header {
     padding: 40px;
     z-index: 10000;
     box-sizing: border-box;
+  }
+  .inner-wrapper ul {
+    display: flex;
+    justify-content: space-between; /* no edges*/
+    align-items: center;
+    width: 100%;
+    position: relative;
+    padding-right: 40px;
+  }
+  .inner-wrapper ul li.search-logo {
+    margin-left: auto; /* makes the all the left space a margin so search logo is right most edge*/
+    margin-right: 20px; /* giving it a breath */
+  }
+  .bottomLinks {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .bottomLinks div ul li {
+    display: none;
+    padding: 5px 0 10px 10px;
+  }
+  .bottomLinks div h3 {
+    width: 100%;
+    padding: 6px;
+    border-bottom: 1px solid rgb(94, 91, 91);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bottomLinks div h3::after {
+    content: "⋁";
+    padding-right: 5px;
+    right: 5%;
+  }
+  .footer-checkbox {
+    display: none;
+  }
+  .footer-checkbox:checked ~ ul li {
+    display: block; /* Drops the link items down underneath the header */
   }
 }
 
@@ -538,32 +584,6 @@ header {
   font-weight: 400;
   opacity: 0.95;
   line-height: 1.4;
-}
-
-/*Slider Dots*/
-.slider-dots {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 24px;
-}
-
-.dot {
-  width: 8px;
-  height: 8px;
-  background-color: #666;
-  border-radius: 50%;
-  display: inline-block;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.dot.active {
-  background-color: #86868b;
-}
-
-.dot:hover {
-  background-color: #86868b;
 }
 
 /* responsiveness */

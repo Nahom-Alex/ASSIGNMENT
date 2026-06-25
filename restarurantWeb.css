@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-columns: 5px; /* Left side fixed, right side fills screen */
+  background: #d4a988;
+}
+
+.main-content-stream {
+  grid-column: 2;
+  padding-left: 0;
+}
+header {
+  z-index: 500;
+  position: fixed;
+  width: 100%;
+  background: rgb(248, 226, 186);
+}
+.navbar-nav {
+  margin-right: 8%;
+  margin-left: auto;
+}
+.container-fluid {
+  background: rgb(248, 226, 186);
+}
+.nav-item .nav-link-disabled {
+  background-color: #4b4343;
+  color: #ffffff;
+  padding: 0.2em 0.2em;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+.hero-section {
+  background-image: url("images/shafe.avif");
+  background-size: cover;
+  background-position: center;
+  height: 95vh;
+  width: 100%;
+}
+
+.chef-intro {
+  background-color: #8a1515;
+  color: #ffffff;
+  padding: 5em 2em;
+  display: flex;
+  justify-content: center; /* Horizontal centering */
+  align-content: center;
+  text-align: center; /* Centers individual text lines */
+}
+
+.intro-content {
+  max-width: 750px; /* Prevents text from being to wide sideways */
+}
+
+.intro-heading {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1em;
+  font-weight: 600;
+}
+
+.intro-subtext {
+  line-height: 1.7;
+  opacity: 0.9;
+}
+
+/* red and yellow section*/
+.split-color-section {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.bg-top-red {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background-color: #8a1515;
+  z-index: 1;
+}
+
+.bg-bottom-yellow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70%;
+  background-color: #cbb154;
+  z-index: 1;
+}
+
+.content-grid-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 40% 60%;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+/* Left Side text */
+.food-info-text {
+  padding-right: 2em;
+}
+
+.food-title {
+  text-transform: uppercase;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 0.8em;
+}
+
+.food-description {
+  color: #222222;
+  font-size: 0.85em;
+  line-height: 1.6;
+  margin-bottom: 1.8em;
+}
+
+.view-menu-btn {
+  display: inline-block;
+  background-color: #8a1515;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.65em 1.5em;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.food-photo-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.food-plate-img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive breakpoint for mobile */
+@media (max-width: 768px) {
+  .content-grid-container {
+    grid-template-columns: 1fr; /* Stacks column cards on mobile views */
+  }
+  .food-info-text {
+    align-self: center;
+    margin-bottom: 1.5em;
+  }
+}
+/* Master Layout Setup */
+.location-split-section {
+  position: relative;
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.loc-bg-top-yellow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15%;
+  background-color: #cbb154;
+  z-index: 1;
+}
+
+.loc-bg-bottom-green {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 85%;
+  background-color: #1e5931; /* Deep green from Marcus Addis */
+  z-index: 1;
+}
+
+/* THE FOREGROUND ROW: Flipped Columns (6fr for Image, 4fr for Text) */
+.location-grid-container {
+  position: relative;
+  z-index: 2;
+  display: grid;
+  grid-template-columns: 60% 40%; /* Left side dominates, right side is compact */
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 5%;
+}
+
+/* Left Side Image Sizing */
+.location-photo-wrapper {
+  width: 100%;
+  display: flex;
+}
+
+.location-img {
+  width: 100%;
+  max-width: 650px;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.location-info-text {
+  padding-left: 3rem;
+  align-self: end;
+  margin-bottom: 4rem;
+}
+
+.location-title {
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.location-description {
+  color: #e0e0e0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  max-width: 340px;
+  margin-bottom: 2rem;
+}
+
+.learn-more-btn {
+  display: inline-block;
+  background-color: #8a1515;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.75rem 2rem;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+/* Responsive breakpoint for mobile view scaling */
+@media (max-width: 768px) {
+  .location-grid-container {
+    grid-template-columns: 1fr; /* Stacks column cards safely on phones */
+  }
+  .location-info-text {
+    padding-left: 0;
+    align-self: center;
+    margin-bottom: 2rem;
+  }
+}
+/* Component Specific Container*/
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* --- Footer Section --- */
+.main-footer {
+  background-color: #b71c1c;
+  color: #333;
+  padding: 40px 0 20px 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.footer-logo img {
+  height: 60px;
+}
+
+.footer-nav a {
+  font-size: 13px;
+  font-weight: 600;
+  margin-left: 25px;
+  color: #ffffff;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-nav a:hover,
+.footer-nav a.active {
+  color: #d32f2f;
+}
+
+.footer-divider {
+  border: 0;
+  height: 1px;
+  background-color: #eee;
+  margin-bottom: 20px;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.copyright {
+  font-size: 11px;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+.copyright a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.social-links a {
+  color: #333;
+  margin-left: 15px;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.social-links a:hover {
+  color: #d32f2f;
+}
+
+/* --- Responsive Layout Switches --- */
+@media (max-width: 768px) {
+  .newsletter-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .newsletter-form {
+    max-width: 100%;
+  }
+
+  .privacy-checkbox {
+    text-align: left;
+  }
+
+  .hero-image {
+    justify-content: center;
+  }
+
+  .footer-top,
+  .footer-bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-nav a {
+    display: block;
+    margin: 10px 0;
+  }
+
+  .social-links {
+    margin-top: 10px;
+  }
+}

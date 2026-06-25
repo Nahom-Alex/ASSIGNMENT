@@ -1,0 +1,149 @@
+<!-- Responsive Grid Website Example (HTML & CSS) ## index.html ```html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Grid Website</title>
+    <link rel="stylesheet" href="restarurantWeb.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style></style>
+  </head>
+  <body>
+    <div class="main-content-stream">
+      <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Menus</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Hours&Location</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">Private Events</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link-disabled">Disabled</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <section class="hero-section"></section>
+      <section class="chef-intro">
+        <div class="intro-content">
+          <h2 class="intro-heading">A Homecoming for Chef Marcus Samuelsson</h2>
+          <p class="intro-subtext">
+            Born in Ethiopia. Raised in Sweden. Inspired by Harlem. Welcome to
+            Marcus’ first restaurant in Africa.
+          </p>
+        </div>
+      </section>
+
+      <section class="split-color-section">
+        <div class="bg-top-red"></div>
+        <div class="bg-bottom-yellow"></div>
+
+        <div class="content-grid-container">
+          <div class="food-info-text">
+            <h2 class="food-title">Our Food</h2>
+            <p class="food-description">
+              A fusion of Marcus' world-renowned international cuisine with an
+              unforgettable Ethiopian twist.
+            </p>
+            <a href="#" class="view-menu-btn">View Menus</a>
+          </div>
+
+          <div class="food-photo-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80"
+              alt="Plated Dish"
+              class="food-plate-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="location-split-section">
+        <div class="loc-bg-top-yellow"></div>
+        <div class="loc-bg-bottom-green"></div>
+
+        <div class="location-grid-container">
+          <div class="location-photo-wrapper">
+            <img
+              src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=800&q=80"
+              alt="Marcus Addis Location"
+              class="location-img"
+            />
+          </div>
+
+          <div class="location-info-text">
+            <h2 class="location-title">Our Location</h2>
+            <p class="location-description">
+              Experience what it's like to dine at the top of the tallest
+              building in East Africa.
+            </p>
+            <a href="#" class="learn-more-btn">Learn More</a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="main-footer">
+        <div class="footer-container">
+          <div class="footer-top">
+            <nav class="footer-nav">
+              <a href="#">HOME</a>
+              <a href="#">ABOUT US</a>
+              <a href="#">MENU</a>
+              <a href="#">GALLERY</a>
+            </nav>
+          </div>
+
+          <hr class="footer-divider" />
+
+          <div class="footer-bottom">
+            <p class="copyright">
+              &copy; Copyright <strong>MARCUS' Addis Restaurant</strong>
+              <a href="mailto:info@marcusaddis.com"
+                >info@marcusaddisrestaurant.com</a
+              >
+              <a href="#">Privacy Policy</a> | <a href="#">Cookie Policy</a>
+            </p>
+            <div class="social-links">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
